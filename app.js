@@ -1,9 +1,7 @@
-var calcFuncao = require("./calculadora")
+var http = require("http");
 
-console.log(calcFuncao.soma(10,20))
-var resultadoMul = calcFuncao.mult(2,2)
-var resultadoSub = calcFuncao.sub(20,2)
-console.log(calcFuncao.div(10,2))
-console.log(resultadoMul)
-console.log(resultadoSub)
-console.log(calcFuncao.nome)
+http.createServer(function(requisicao,resposta){
+    resposta.end("<h1>Bem vindo ao meu site!</h1><h4>guiadoprogramador.com</h4>");
+}).listen(3000);
+
+console.log("Meu servidor está rodando!");
