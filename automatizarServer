@@ -1,0 +1,4 @@
+Linux:
+sudo npm install nodemon -g
+Windows:
+npm install nodemon -g
