@@ -10,7 +10,8 @@ app.get('/blog/:artigo?',function(req,res){
     artigo?res.send(`Segundo o artigo ${artigo}`):res.send("Bem vindo ao meu blog!")
 })
 app.get('/canal/youtube', function(req, res){
-    res.send("<h1>Bem vindo ao meu canal</h1>")
+    var canal = req.query["canal"]
+    canal?res.send(canal):res.send("Nenhum canal foi fornecido")
 })
 
 app.get('/ola/:nome/:empresa',function(req, res){ //Digite algo depois do "/ola"
