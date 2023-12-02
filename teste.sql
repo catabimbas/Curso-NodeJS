@@ -1,16 +1,11 @@
 /* COMANDOS */
-/* Criar Banco de Dados */
-CREATE DATABASES "nome do seu banco";
-/* Acessar o seu Banco */
-USE "banco desejado";
-/* Criar tables (Tabelas) */
-CREATE TABLE usuarios(
-    /* Colunas */
-    nome VARCHAR(50), /* ou CHAR são caracteres */
-    email VARCHAR(255), /* Limite de caracteres do VARCHAR */
-    idade INT /* Números Inteiros */
+/* Inserir dados na table */
+INSERT INTO usuarios(idade, email, nome) Values(
+    19,
+    "email@teste.com",
+    "Victor Silva"
 );
-/* Mostra as tabelas */
-SHOW TABLES;
-/* Acessar tabela */
-DESCRIBE "Tabela Desejada";
+/* Listando os dados da table */
+SELECT * FROM usuarios; /* Selecione todos os dados de table */
+/* Especificando dado */
+SELECT * FROM usuarios WHERE idade = 8;
