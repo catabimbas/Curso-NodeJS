@@ -16,5 +16,12 @@
     <p><%= nome %> </p>
     <%= lang %>
     <p>Empresa: <%= empresa %></p>
+
+    <!-- Condição true, false -->    
+    <% if (msg){ %>
+        <h3>ERROR</h3>
+    <%} else {%>
+        <h3>Nenhum erro</h3>
+    <%}%>
 </body>
 </html>

@@ -7,10 +7,12 @@ app.set('view engine', 'ejs')
 app.get("/", (req,res)=>{
     var nome = "Victor lima"
     var lang = "JS"
+    var exibirMsg = false
     res.render("index",{
         nome: nome,
         lang: lang,
-        empresa: "Guia do programador"
+        empresa: "Guia do programador",
+        msg: exibirMsg
     })
 })
 app.get("/:nome/:lang", (req,res)=>{
