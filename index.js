@@ -8,11 +8,21 @@ app.get("/", (req,res)=>{
     var nome = "Victor lima"
     var lang = "JS"
     var exibirMsg = false
+
+    var produtos = [
+        {nome: "Doritos", preco: 3.14},
+        {nome: "Coca-cola", preco: 5},
+        {nome: "Leite", preco: 1.45},
+        {nome: "Carne", preco: 15},
+        {nome: "Redbull", preco: 6}
+    ]
+
     res.render("index",{
         nome: nome,
         lang: lang,
         empresa: "Guia do programador",
-        msg: exibirMsg
+        msg: exibirMsg,
+        produtos:produtos
     })
 })
 app.get("/:nome/:lang", (req,res)=>{
