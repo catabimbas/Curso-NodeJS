@@ -5,7 +5,21 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.get("/", (req,res)=>{
-    res.render("index")
+    var nome = "Victor lima"
+    var lang = "JS"
+    res.render("index",{
+        nome: nome,
+        lang: lang,
+        empresa: "Guia do programador"
+    })
+})
+app.get("/:nome/:lang", (req,res)=>{
+    var nome = req.params.nome
+    var lang = req.params.lang
+    res.render("home",{
+        nome: nome,
+        lang: lang
+    })
 })
 app.get("/usuario", (req,res)=>{
     res.render("principal/perfil")
