@@ -1,0 +1,16 @@
+Link para baixar o Bootstrap
+https://getbootstrap.com/docs/4.5/getting-started/introduction/
+
+Mas se tiver com preguiça de ver, só seguir o passo a passo
+A versão da aula é essa
+https://getbootstrap.com/docs/4.3/getting-started/introduction/
+
+1. Baixe a versão JS e CSS
+2. Descompacte para a pasta do projeto
+    2.1 Bota na pasta "Public"
+3. Adicione isso na head do html desejado
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+4 Depois cole esses scripts
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
