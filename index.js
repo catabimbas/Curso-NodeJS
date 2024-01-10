@@ -13,4 +13,8 @@ app.get("/perguntar", (req,res)=>{
     res.render("perguntar")
 })
 
+app.post("/salvarPergunta", (req,res)=>{
+    res.send("Formulario recebido")
+})
+
 app.listen (8080, ()=>{console.log("App rodando!")})
