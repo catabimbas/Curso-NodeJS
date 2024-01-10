@@ -1,6 +1,0 @@
-Alteração feita no decorrer do tempo (partils)
-Se antes era assim]
-<%- include partials/header.ejs %> 
-
-Agora é escrito assim
-<%- include ("partials/header.ejs"); %>
