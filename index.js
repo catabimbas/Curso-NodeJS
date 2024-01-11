@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const connection = require('./database/database')
+const Pergunta = require("./database/Perguntar")
 
 // Database
 connection
@@ -33,9 +34,12 @@ app.get("/perguntar", (req,res)=>{
 app.post("/salvarPergunta", (req,res)=>{
     var titulo = req.body.titulo
     var descricao = req.body.descricao
-    console.log(titulo)
-    console.log(descricao)
-    res.send("Formulario recebido")
+    Pergunta.create({ // Equivalente ao INSERT INTO perguntas ... Pergunta.
+        titulo: titulo,
+        descricao: descricao
+    }).then(()=>{
+        res.redirect("/")
+    })
 })
 
 app.listen (8080, ()=>{console.log("App rodando!")})
