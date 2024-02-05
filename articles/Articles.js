@@ -20,6 +20,7 @@ const Articles = connection.define('articles', {
 Category.hasMany(Articles) // Uma categoria tem muitos artigos
 Articles.belongsTo(Category) //Um Artigo pertence a uma categoria
 
-// (Ele vai formatar o banco toda vez que iniciar)  Articles.sync({force:true})
+// Correção no bug
+Articles.sync({force:false})
 
 module.exports = Articles
