@@ -34,7 +34,7 @@ app.use("/",articlesController)
 
 
 app.get("/",(req,res)=>{
-    res.render("index")
+    res.send("Se acalma meu fi")
 })
 
 app.listen(8080, ()=>{
