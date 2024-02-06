@@ -22,7 +22,7 @@
                         <th><%=category.slug%></th>
                         <th>
                             
-                            <form action="/categories/delete" method="post" style="display:inline">
+                            <form onsubmit="confiDel(event,this)" action="/categories/delete" method="post" style="display:inline">
                                 <input type="hidden" name="id" value="<%= category.id %>">
                                 <button class="btn btn-danger">Excluir</button>
                             </form>
@@ -35,4 +35,14 @@
     </div>
 
 </body>
+<script>
+    function confiDel(event,form){
+        event.preventDefault()
+        var decision = confirm("Você quer excluir está categoria?")
+        if(decision){
+            form.submit()
+        }
+
+    }
+</script>
 <%- include ('../../partials/footer.ejs') %>
